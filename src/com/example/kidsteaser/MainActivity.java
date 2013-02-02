@@ -3,9 +3,12 @@ package com.example.kidsteaser;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.GridView;
 
 public class MainActivity extends Activity {
+	
+	ImageAdapter imageAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +18,8 @@ public class MainActivity extends Activity {
 
 		GridView grid = (GridView) findViewById(R.id.gridview);
 		
-		grid.setAdapter(new ImageAdapter(this));
+		imageAdapter = new ImageAdapter(this);
+		grid.setAdapter(imageAdapter);
 		
 	}
 	
@@ -24,6 +28,12 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
+	}
+	
+	public void onNextClick(View view) {
+		
+		imageAdapter.newQuiz();
+		
 	}
 
 }
