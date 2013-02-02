@@ -6,4 +6,5 @@ to setup --
 4. cd kidsquest
 5. git clone https://github.com/vraithatha/kids
 6. import the project into eclipse
+
 ====
