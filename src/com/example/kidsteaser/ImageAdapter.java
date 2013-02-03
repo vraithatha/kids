@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
 	private Context mContext;
-	private Object mAnswerChar;
+	private Character mAnswerChar = null;
 
 	public ImageAdapter(Context c) {
 		mContext = c;
@@ -69,7 +69,7 @@ public class ImageAdapter extends BaseAdapter {
 		return view;
 	}
 
-	private CharSequence getTextForPosition(int position) {
+	public CharSequence getTextForPosition(int position) {
 
 		return mChars[position].toString();
 
@@ -112,6 +112,10 @@ public class ImageAdapter extends BaseAdapter {
 			}
 		}
 		return false;
+	}
+	
+	public Character getAnswer() {
+		return mAnswerChar;
 	}
 
 	private Character randomAnswerChar() {

@@ -6,5 +6,6 @@
     <string name="menu_settings">Settings</string>
     <string name="quiz">Find the letter</string>
     <string name="next">Next</string>
+    <string name="play">Play</string>
 
 </resources>
